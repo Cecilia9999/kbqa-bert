@@ -9,6 +9,8 @@ from transformers import BertForTokenClassification,BertTokenizer,BertConfig
 
 
 # CRF Ref: https://pytorch-crf.readthedocs.io/en/stable/index.html
+# bertCrf Ref: https://github.com/997261095/bert-kbqa/blob/master/BERT_CRF.py
+
 class CRF(nn.Module):
 	
     def __init__(self, num_tags : int = 2, batch_first: bool = True) -> None:
