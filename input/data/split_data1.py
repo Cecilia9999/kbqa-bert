@@ -33,7 +33,7 @@ for file_name in file_name_list:
         f.close()
     
     elif 'testing' in file_name:
-        assert len(file) % 4 == 0           # 断言
+        assert len(file) % 4 == 0          
         testing_num = len(file) / 4         # 一个样本是由 4 行构成的
         test_num = int(testing_num / 2)         # 真正的测试集分一半
 

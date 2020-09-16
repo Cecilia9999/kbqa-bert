@@ -32,19 +32,19 @@ def calc_acc(real_label, pred_label):
     pred_label = np.array(pred_label)
 
     assert real_label.shape == pred_label.shape
-    assert real_label.shape[0] % 6 == 0  #真实label应该是6的倍数
+    assert real_label.shape[0] % 2 == 0  #真实label应该是2的倍数
 
     # 对每个label：预测正确的个数/预测总数（无论真假label）
     label_acc = float((real_label == pred_label).sum()) / float(pred_label.shape[0])
     
     #
-    real_label = real_label.reshape(-1,6)
+    real_label = real_label.reshape(-1,2)
     assert real_label.shape[0] == real_label[:,0].sum()
 
-    # 转成真实问题数*（6个预测概率）
-    pred_label = pred_label.reshape(-1,6)
+    # 转成真实问题数*（2个预测概率）
+    pred_label = pred_label.reshape(-1,2)
 
-    # 看看对每个问题预测成6个答案的概率
+    # 看看对每个问题预测成2个答案的概率
     #pred_idx = pred_label.argmax(dim=-1)
     pred_idx = np.argmax(pred_label, axis=1).flatten()
 

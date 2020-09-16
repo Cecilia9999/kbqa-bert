@@ -16,7 +16,7 @@ https://github.com/huangxiangzhou/NLPCC2016KBQA
 
 - ner-dataset2.py: 构造NER数据集，采用BIO标签
 
-- sim-dataset3.py: 构造【问题-属性】数据集，二分类问题：1个问题-正确实体：label=1 / 5个问题-错误实体：label=0
+- sim-dataset3.py: 构造【问题-属性】数据集，二分类问题：1个问题-正确实体：label=1 / 1个问题-错误实体：label=0
 
 - triple_clean4.py: 构造三元组数据集，存为csv文件，用于mention查询
 

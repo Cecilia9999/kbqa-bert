@@ -44,10 +44,10 @@ for file_name in file_name_list:
         pos_att = pos_att.strip().replace(' ','')    # 去尾部，空格
         pos_att = re.sub(pattern, '', pos_att)         # 去掉 以-开头
         
-        #每个问题一个正例属性（自身），5个负例属性（随机）
+        #每个问题1个正例属性（自身），1个负例属性（随机）
         neg_att_list = []
         while True:
-            neg_att_list = random.sample(attribute_list, 5)
+            neg_att_list = random.sample(attribute_list, 1)
             if pos_att not in neg_att_list:
                 break
                 
